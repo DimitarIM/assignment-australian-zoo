@@ -1,0 +1,84 @@
+.navbar {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    max-width: 100%;
+    height: 100px;
+    padding: 1rem;
+    background: transparent;
+    left: 60px;
+    right: 0;
+}
+
+.site_logo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 3rem;
+    text-wrap: nowrap;
+    gap: 0.5rem;
+    height: 100%;
+    flex-grow: 2;
+}
+
+.zoo_sub {
+    color: rgb(255, 217, 0);
+    display: inline;
+}
+
+.navbar_links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2rem;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.navbar_link {
+    letter-spacing: 1px;
+    font-size: var(--font-size-md);
+}
+
+span.icon {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width:768px){
+    .navbar {
+        padding: 0.3rem;
+    }
+    .site_logo {
+        font-size: 25px;
+    }
+    .navbar_links {
+        gap: 0.5rem;
+    }
+    .navbar_link {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 441px) {
+    span.icon {display:none}
+    span.text {display:inline-block}
+}
+
+@media (max-width: 440px) {
+    .site_logo {
+        font-size: 15px;
+    }
+
+    span.icon {
+        display: inline-block
+    }
+
+    span.text {
+        display: none
+    }
+
+    .navbar_links {
+        gap: 0.7rem;
+    }
+}

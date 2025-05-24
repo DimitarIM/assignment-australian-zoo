@@ -1,0 +1,11 @@
+.animal_tab {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border: 2px solid var(--white);
+    border-radius: 10px;
+}
+
+.animal_tab.active {
+    border-color: brown;
+}

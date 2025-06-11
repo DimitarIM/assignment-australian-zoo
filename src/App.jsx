@@ -11,14 +11,16 @@ import AnimalGroup from './pages/AnimalGroup/AnimalGroup';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Sidebar from './components/Sidebar/Sidebar';
+import { useState } from 'react';
 
 function App() {
 
   function Layout() {
+    const [NavClicked, SetNavClicked] = useState(false);
     return (
       <>
-        <NavBar />
-        <Sidebar />
+        <NavBar SetNavClicked = {SetNavClicked}/>
+        <Sidebar NavClicked = {NavClicked} SetNavClicked = {SetNavClicked}/>
         <div className='main-content'>
               <Outlet />
         </div>
